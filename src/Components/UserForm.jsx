@@ -11,6 +11,8 @@ export class UserForm extends Component {
     role: '',
     password: '',
     step: 1,
+    checkedUpdates: false,
+    checkedCommunication: false
   }
 
   //Proceed to next step
@@ -42,7 +44,7 @@ export class UserForm extends Component {
       email,
       role,
       password,
-      step
+      step,
     } = this.state;
 
     //I created the const values to pass all the attributes of the state as a prop
