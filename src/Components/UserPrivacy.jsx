@@ -1,7 +1,4 @@
 import React, { Component } from 'react';
-import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
-import Checkbox from 'material-ui/Checkbox';
-import RaisedButton from 'material-ui/RaisedButton';
 
 
 class userPrivacy extends Component {
@@ -18,62 +15,58 @@ class userPrivacy extends Component {
     this.props.prevStep();
   }
 
+
   render() {
     const label = {
-      privacyTerm: "Receive updates about Tray.io products by email",
+      updateTerm: "Receive updates about Tray.io products by email",
       communication: "Receive Communication by email for other products created by the Tray.io team"
     }
 
     //Destructuring attributes from the props
-    const { values, handleChange } = this.props
+    const { values: { isUpdate, isCommunication }, handleChange } = this.props
     return (
-      <MuiThemeProvider>
-        <section className="mainSection">
-          <section className="formSection">
-            <h2>Privacy policy</h2>
+      <section className="mainSection">
+        <section className="formSection">
+          <h2>Privacy policy</h2>
 
-            <section className="checkBoxes">
-              <Checkbox
-                onChange={handleChange('checkedB')}
-                value="checkedB"
-                color="primary"
-                label={label.privacyTerm}
-              />
-              <br />
-              <Checkbox
-                // checked={state.checkedB}
-                onChange={handleChange('checkedB')}
-                value="checkedB"
-                color="primary"
-                label={label.communication}
-              />
-            </section>
+          <section className="checkBoxes">
+            <input
+              type="checkbox"
+              onClick={handleChange}
+              name="isUpdate"
+              checked={isUpdate}
+            />
+            <label>{label.updateTerm}</label>
             <br />
-
-            <RaisedButton
-              label="Back"
-              primary={false}
-              style={styles.button}
-              onClick={this.back}
+            <input
+              type="checkbox"
+              onClick={handleChange}
+              name="isCommunication"
+              checked={isCommunication}
             />
-            <RaisedButton
-              label="continue"
-              primary={true}
-              style={styles.button}
-              onClick={this.continue}
-            />
+            <label>{label.communication}</label>
           </section>
+          <br />
+
+          <button
+            className="btn"
+            onClick={this.back}
+          >
+            Back
+          </button>
+          <button
+            className="btn"
+            onClick={this.continue}
+          >
+            Continue
+          </button>
+
         </section>
-      </MuiThemeProvider>
+      </section>
     )
 
   }
 }
 
-const styles = {
-  button: {
-    margin: 15
-  }
-}
 
 export default userPrivacy

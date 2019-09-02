@@ -1,7 +1,5 @@
-import React, { Component, Fragment } from 'react'
-import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
-import TextField from 'material-ui/TextField';
-import RaisedButton from 'material-ui/RaisedButton';
+import React, { Component } from 'react'
+
 
 class userDetails extends Component {
 
@@ -16,56 +14,66 @@ class userDetails extends Component {
     //Destructuring attributes from the props
     const { values, handleChange } = this.props
     return (
-      <MuiThemeProvider>
-        <section className="mainSection">
-          <section className="formSection">
-            <h2>Enter User Details</h2>
-            <TextField
-              hintText="Enter Your Name"
-              floatingLabelText="Name *"
-              onChange={handleChange('name')}
-              defaultValue={values.name}
+
+      <section className="mainSection">
+        <section className="formSection">
+          <h2>Enter User Details</h2>
+          <article className="inputFields">
+            <label>Name<span className="asterisk">*</span></label>
+            <input
+              placeholder="Enter Your Name"
+              onChange={handleChange}
+              value={values.name}
+              name="name"
+              type="text"
+              required
             />
-            <br />
-            <TextField
-              hintText="Enter Your Role"
-              floatingLabelText="role *"
-              onChange={handleChange('role')}
-              defaultValue={values.role}
+          </article>
+
+          <article className="inputFields">
+            <label>Role<span className="asterisk">*</span></label>
+
+            <input
+              placeholder="Enter Your Role"
+              onChange={handleChange}
+              value={values.role}
+              name="role"
+              type="text"
             />
-            <br />
-            <TextField
-              hintText="Enter Your Email"
-              floatingLabelText="Email *"
-              onChange={handleChange('email')}
-              defaultValue={values.email}
+          </article>
+
+          <article className="inputFields">
+            <label>Email<span className="asterisk">*</span></label>
+
+            <input
+              placeholder="Enter Your Email"
+              onChange={handleChange}
+              value={values.email}
+              name="email"
+              type="text"
             />
-            <br />
-            <TextField
-              hintText="Enter Your Password"
-              floatingLabelText="Password *"
-              onChange={handleChange('password')}
-              defaultValue={values.password}
+          </article>
+          <article className="inputFields">
+            <label>Password<span className="asterisk">*</span></label>
+
+            <input
+              placeholder="Enter Your Password"
+              type="password"
+              onChange={handleChange}
+              value={values.password}
+              name="password"
             />
-            <br />
-            <RaisedButton
-              label="continue"
-              primary={true}
-              style={styles.button}
-              onClick={this.continue}
-            />
-          </section>
+          </article>
+          <button className="btn"
+            onClick={this.continue}
+          >Continue</button>
         </section>
-      </MuiThemeProvider>
+      </section>
+
     )
 
   }
 }
 
-const styles = {
-  button: {
-    margin: 15
-  }
-}
 
 export default userDetails

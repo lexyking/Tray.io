@@ -5,14 +5,17 @@ import UserConfirm from './UserConfirm';
 import UserDone from './UserDone'
 
 export class UserForm extends Component {
-  state = {
-    name: '',
-    email: '',
-    role: '',
-    password: '',
-    step: 1,
-    checkedUpdates: false,
-    checkedCommunication: false
+  constructor() {
+    super()
+    this.state = {
+      name: '',
+      email: '',
+      role: '',
+      password: '',
+      step: 1,
+      isUpdate: false,
+      isCommunication: false
+    }
   }
 
   //Proceed to next step
@@ -30,11 +33,15 @@ export class UserForm extends Component {
       step: step - 1
     })
   }
-
+  s
   //Handle fields change
-  handleChange = input => e => {
-    this.setState({ [input]: e.target.value });
+  handleChange = e => {
+    const { value, name, type, checked } = e.target
+    console.log(e.target)
+    type === 'checkbox' ? this.setState({ [name]: checked }) : this.setState({ [name]: value });
   }
+
+
 
   render() {
     //Destructuring the elements of the state to have a clean code
@@ -43,7 +50,8 @@ export class UserForm extends Component {
       name,
       email,
       role,
-      password,
+      isUpdate,
+      isCommunication,
       step,
     } = this.state;
 
@@ -52,7 +60,8 @@ export class UserForm extends Component {
       name,
       email,
       role,
-      password
+      isUpdate,
+      isCommunication
     }
 
     //Because i only have few tabs to return based on the step the 

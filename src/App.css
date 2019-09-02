@@ -2,6 +2,9 @@
   text-align: center;
 }
 
+.asterisk{
+  color: red;
+}
 
 .mainSection{
 background-image: url('./images/tray-integrate-data_2x.png');
@@ -22,14 +25,20 @@ justify-content: flex-end;
  width: 150px;
 }
 
+.userImg{
+  width: 200px;
+  margin: auto;
+  padding: 20px;
+}
+
 .logo img{
   max-width: 100%;
 }
+
 .checkBoxes{
   width: 50%;
   margin: auto;
   text-align: left;
-  
 }
 
 .main{
@@ -37,8 +46,8 @@ min-height: 100vh;
 }
 
 .header{
-  background: rgb(170, 174, 127);
-  min-height: 60px;
+background: rgb(170, 174, 127);
+min-height: 60px;
 display: flex;
 justify-content: space-around;
 
@@ -52,6 +61,16 @@ justify-content: space-around;
     background: rgb(170, 174, 127);
 }
 
+.inputFields{
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  width: 60%;
+  margin: 5% auto;
+}
+
+
+
 /* Small devices (portrait tablets and large phones, 600px and up) */
 @media only screen and (max-width: 600px) {
   .formSection{
@@ -60,7 +79,6 @@ justify-content: space-around;
   min-height: 80%;
   margin: auto;
   border: none;
-  /* background: rgba(170, 174, 127, 0.897); */
   background: rgba(255, 255, 255, 0.829);
   }
 
@@ -78,9 +96,19 @@ background-position: center;
   background:  rgba(255, 255, 255, 0.829);
   margin: auto;
   border: 2px solid rgb(170, 174, 127);
+  padding: 10px;
   }
     .mainSection{
 background-position: center;
+}
+
+.btn{
+  padding: 10px;
+  width: 100px;
+  margin: 0 10px;
+  background: rgb(170, 174, 127);
+  border: none;
+  border-radius: 5px;
 }
  
 } 
