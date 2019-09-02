@@ -30,21 +30,24 @@ class userPrivacy extends Component {
           <h2>Privacy policy</h2>
 
           <section className="checkBoxes">
-            <input
-              type="checkbox"
-              onClick={handleChange}
-              name="isUpdate"
-              checked={isUpdate}
-            />
-            <label>{label.updateTerm}</label>
-            <br />
-            <input
-              type="checkbox"
-              onClick={handleChange}
-              name="isCommunication"
-              checked={isCommunication}
-            />
-            <label>{label.communication}</label>
+            <article>
+              <input
+                type="checkbox"
+                onClick={handleChange}
+                name="isUpdate"
+                checked={isUpdate}
+              />
+              <label>{label.updateTerm}</label>
+            </article>
+            <article>
+              <input
+                type="checkbox"
+                onClick={handleChange}
+                name="isCommunication"
+                checked={isCommunication}
+              />
+              <label>{label.communication}</label>
+            </article>
           </section>
 
           <button

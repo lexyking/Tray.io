@@ -2,7 +2,8 @@ import React, { Component } from 'react';
 import UserDetails from './UserDetails';
 import UserPrivacy from './UserPrivacy'
 import UserConfirm from './UserConfirm';
-import UserDone from './UserDone'
+import UserDone from './UserDone';
+import Joi from 'joi';
 
 export class UserForm extends Component {
   constructor() {
@@ -14,16 +15,26 @@ export class UserForm extends Component {
       password: '',
       step: 1,
       isUpdate: false,
-      isCommunication: false
+      isCommunication: false,
+      errorForm: '',
+      isDisplay: true
     }
   }
 
   //Proceed to next step
   nextStep = () => {
-    const { step } = this.state;
-    this.setState({
-      step: step + 1
-    })
+    const { step, name, email, role, password } = this.state;
+    if (step === 1) {
+      const values = { name, email, role, password }
+      const result = this.isValid(values)
+      result ? this.setState({ errorForm: result.msg, isDisplay: true }) : this.setState({ step: step + 1 })
+
+    } else {
+      this.setState({
+        step: step + 1
+      })
+    }
+
   }
 
   //Go back to prev step
@@ -41,6 +52,29 @@ export class UserForm extends Component {
     type === 'checkbox' ? this.setState({ [name]: checked }) : this.setState({ [name]: value });
   }
 
+  handleClick = () => {
+    const { isDisplay } = this.state
+    this.setState({
+      isDisplay: !isDisplay
+    })
+    console.log(isDisplay)
+  }
+
+  //Form Validation
+  isValid = event => {
+    const schema = Joi.object().keys({
+      name: Joi.string().min(3).max(30).required(),
+      role: Joi.string().required(),
+      email: Joi.string().email(),
+      password: Joi.string().regex(/^[a-zA-Z0-9]{3,30}$/)
+    })
+
+    return Joi.validate(event, schema, (err, result) => {
+      if (err) {
+        return { msg: err.details[0].message }
+      }
+    })
+  }
 
 
   render() {
@@ -53,6 +87,9 @@ export class UserForm extends Component {
       isUpdate,
       isCommunication,
       step,
+      password,
+      errorForm,
+      isDisplay
     } = this.state;
 
     //I created the const values to pass all the attributes of the state as a prop
@@ -60,8 +97,11 @@ export class UserForm extends Component {
       name,
       email,
       role,
+      password,
       isUpdate,
-      isCommunication
+      isCommunication,
+      errorForm,
+      isDisplay
     }
 
     //Because i only have few tabs to return based on the step the 
@@ -73,6 +113,7 @@ export class UserForm extends Component {
           <UserDetails
             nextStep={this.nextStep}
             handleChange={this.handleChange}
+            handleClick={this.handleClick}
             values={values}
           />
         );

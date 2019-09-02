@@ -1,9 +1,22 @@
-.App {
-  text-align: center;
+/* The header of the application */
+.header{
+background: rgb(170, 174, 127);
+min-height: 60px;
+display: flex;
+justify-content: space-around;
 }
 
-.asterisk{
-  color: red;
+.logo{
+ width: 150px;
+}
+
+/* The main bloc of the page */
+.main{
+min-height: 100vh;
+}
+
+.App {
+  text-align: center;
 }
 
 .mainSection{
@@ -16,13 +29,16 @@ display: flex;
 justify-content: flex-end;
 }
 
+/* The section of the form */
 .formSection{
   width: 50%;
   background: rgb(255, 255, 255);
-  min-height: 100%;
+  min-height: 80%;
+  padding: 70px 0;
 }
-.logo{
- width: 150px;
+
+.asterisk{
+  color: red;
 }
 
 .userImg{
@@ -41,30 +57,15 @@ justify-content: flex-end;
   text-align: left;
 }
 
-.main{
-min-height: 100vh;
+.checkBoxes article{
+margin: 10% 5%;
+line-height: 30px;
 }
 
-.header{
-background: rgb(170, 174, 127);
-min-height: 60px;
-display: flex;
-justify-content: space-around;
-
-}
-
-.inputFields input{
+input{
   padding: 10px;
   border-radius: 5px;
   border: 1px solid rgb(170, 174, 127);
-}
-
-.footer{
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 40px;
-    background: rgb(170, 174, 127);
 }
 
 .inputFields{
@@ -75,6 +76,31 @@ justify-content: space-around;
   margin: 5% auto;
 }
 
+/* Error message */
+.errorMessage{
+  position: absolute;
+  width: 60%;
+  height: 30%;
+  background: red;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+  left: 20%;
+  top: 35%;
+}
+
+.btnClose{
+  position: absolute;
+  bottom: 5%;
+}
+
+.errorBoxDisappear{
+  display: none;
+}
+
+/* Style of the two buttons */
 .btn-back{
   background: white;
   border: 2px solid;
@@ -98,6 +124,25 @@ justify-content: space-around;
 .btn:hover{
   background: green;
   color: white;
+}
+
+/* Style of the successful submit page  */
+.verifyText{
+  width: 80%;
+  margin: auto;
+  margin-top: 10%;
+  color: rgb(170, 174, 127);
+  font-weight: bold;
+  font-size: 30px;
+}
+
+/* The footer of the app */
+.footer{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 40px;
+    background: rgb(170, 174, 127);
 }
 
 /* Small devices (portrait tablets and large phones, 600px and up) */
