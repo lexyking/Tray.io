@@ -46,14 +46,14 @@ class userPrivacy extends Component {
             />
             <label>{label.communication}</label>
           </section>
-          <br />
 
           <button
-            className="btn"
+            className="btn btn-back"
             onClick={this.back}
           >
             Back
           </button>
+
           <button
             className="btn"
             onClick={this.continue}

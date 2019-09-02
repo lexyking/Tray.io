@@ -48,7 +48,7 @@ class userConfirm extends Component {
           </section>
 
           <button
-            className="btn"
+            className="btn btn-back"
             onClick={this.back}
           >
             Back

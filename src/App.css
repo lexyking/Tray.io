@@ -36,7 +36,7 @@ justify-content: flex-end;
 }
 
 .checkBoxes{
-  width: 50%;
+  width: 90%;
   margin: auto;
   text-align: left;
 }
@@ -51,6 +51,12 @@ min-height: 60px;
 display: flex;
 justify-content: space-around;
 
+}
+
+.inputFields input{
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid rgb(170, 174, 127);
 }
 
 .footer{
@@ -69,7 +75,30 @@ justify-content: space-around;
   margin: 5% auto;
 }
 
+.btn-back{
+  background: white;
+  border: 2px solid;
+}
 
+.btn{
+  padding: 10px;
+  min-width: 100px;
+  margin: 0 10px;
+  background: rgb(170, 174, 127);
+  border: none;
+  border-radius: 5px;
+  border: 2px solid rgb(170, 174, 127);
+  
+}
+
+.btn-back{
+  background: white;
+  border: 2px solid rgba(170, 174, 127, 0.52);
+}
+.btn:hover{
+  background: green;
+  color: white;
+}
 
 /* Small devices (portrait tablets and large phones, 600px and up) */
 @media only screen and (max-width: 600px) {
@@ -102,13 +131,5 @@ background-position: center;
 background-position: center;
 }
 
-.btn{
-  padding: 10px;
-  width: 100px;
-  margin: 0 10px;
-  background: rgb(170, 174, 127);
-  border: none;
-  border-radius: 5px;
-}
- 
+
 } 
