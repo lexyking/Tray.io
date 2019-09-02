@@ -28,5 +28,7 @@ After cloning the repo, use
 ```yarn install```
 
 then ```yarn start```
-in the terminal to run and test the application :rocket: 
+
+in the terminal to run the application :rocket: 
+
 
