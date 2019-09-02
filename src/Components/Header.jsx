@@ -1,11 +1,14 @@
-import React, { Component } from 'react'
+import React, { Component } from 'react';
+import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
+import AppBar from 'material-ui/AppBar';
 
 export class Header extends Component {
   render() {
     return (
-      <header className="App-header">
-        <h1>Tray.io Registration form</h1>
-      </header>
+      <MuiThemeProvider>
+        <AppBar position="static" title="Tray.io Registration form" />
+
+      </MuiThemeProvider>
     )
   }
 }
