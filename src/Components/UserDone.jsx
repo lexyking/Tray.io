@@ -2,9 +2,9 @@ import React from 'react'
 
 function userDone() {
   return (
-    <div>
+    <section className="formSection">
       <h1>User Done</h1>
-    </div>
+    </section>
   )
 }
 

@@ -1,12 +1,17 @@
 import React, { Component } from 'react';
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
-import AppBar from 'material-ui/AppBar';
+import imgScr from '../images/tray-io.png'
 
 export class Header extends Component {
   render() {
     return (
       <MuiThemeProvider>
-        <AppBar position="static" title="Tray.io Registration form" />
+        <header className="header">
+          <section className="logo">
+            <img src={imgScr} alt='' />
+          </section>
+          <h1>Joan Yassi</h1>
+        </header>
 
       </MuiThemeProvider>
     )

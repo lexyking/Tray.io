@@ -8,7 +8,7 @@ class App extends Component {
 
   render() {
     return (
-      <div>
+      <main className="main">
         {/* The header of the application */}
         <Header />
 
@@ -17,7 +17,7 @@ class App extends Component {
 
         {/* The footer of the application */}
         <Footer />
-      </div>
+      </main>
     );
 
   }
