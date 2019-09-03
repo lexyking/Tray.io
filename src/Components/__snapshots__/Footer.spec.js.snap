@@ -1,0 +1,11 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Footer component Matches the snapshot 1`] = `
+<footer
+  className="footer"
+>
+  <p>
+    Tray.io Technical interview, September 2019
+  </p>
+</footer>
+`;
