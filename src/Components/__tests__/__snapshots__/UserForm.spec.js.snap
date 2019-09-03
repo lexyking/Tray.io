@@ -1,0 +1,101 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`UserForm component Matches the snapshot 1`] = `
+Array [
+  "",
+  <section
+    className="mainSection"
+  >
+    <section
+      className="formSection"
+    >
+      <h2>
+        Enter User Details
+      </h2>
+      <article
+        className="inputFields"
+      >
+        <label>
+          Name
+          <span
+            className="asterisk"
+          >
+            *
+          </span>
+        </label>
+        <input
+          name="name"
+          onChange={[Function]}
+          placeholder="Enter Your Name"
+          required={true}
+          type="text"
+          value=""
+        />
+      </article>
+      <article
+        className="inputFields"
+      >
+        <label>
+          Role
+          <span
+            className="asterisk"
+          >
+            *
+          </span>
+        </label>
+        <input
+          name="role"
+          onChange={[Function]}
+          placeholder="Enter Your Role"
+          type="text"
+          value=""
+        />
+      </article>
+      <article
+        className="inputFields"
+      >
+        <label>
+          Email
+          <span
+            className="asterisk"
+          >
+            *
+          </span>
+        </label>
+        <input
+          name="email"
+          onChange={[Function]}
+          placeholder="Enter Your Email"
+          type="text"
+          value=""
+        />
+      </article>
+      <article
+        className="inputFields"
+      >
+        <label>
+          Password
+          <span
+            className="asterisk"
+          >
+            *
+          </span>
+        </label>
+        <input
+          name="password"
+          onChange={[Function]}
+          placeholder="Enter Your Password"
+          type="password"
+          value=""
+        />
+      </article>
+      <button
+        className="btn"
+        onClick={[Function]}
+      >
+        Continue
+      </button>
+    </section>
+  </section>,
+]
+`;

@@ -9,7 +9,8 @@ function userDone() {
           <img src={imgSrc} alt='' />
         </section>
 
-        <p className="verifyText">Please verify your email address, you should have received an email
+        <p className="verifyText">
+          Please verify your email address, you should have received an email
           from us already
         </p>
       </section>

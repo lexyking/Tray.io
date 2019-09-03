@@ -1,0 +1,25 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`UserDone component Render Correctly 1`] = `
+<section
+  className="mainSection"
+>
+  <section
+    className="formSection"
+  >
+    <section
+      className="userImg"
+    >
+      <img
+        alt=""
+        src="user-check-solid.svg"
+      />
+    </section>
+    <p
+      className="verifyText"
+    >
+      Please verify your email address, you should have received an email from us already
+    </p>
+  </section>
+</section>
+`;

@@ -21,11 +21,11 @@ class userPrivacy extends Component {
       updateTerm: "Receive updates about Tray.io products by email",
       communication: "Receive Communication by email for other products created by the Tray.io team"
     }
-
     //Destructuring attributes from the props
-    const { values: { isUpdate, isCommunication }, handleChange } = this.props
+    const { handleChange, values } = this.props
     return (
       <section className="mainSection">
+        {/* {console.log(values)} */}
         <section className="formSection">
           <h2>Privacy policy</h2>
 
@@ -35,7 +35,7 @@ class userPrivacy extends Component {
                 type="checkbox"
                 onClick={handleChange}
                 name="isUpdate"
-                checked={isUpdate}
+                defaultChecked={values.isUpdate}
               />
               <label>{label.updateTerm}</label>
             </article>
@@ -44,7 +44,7 @@ class userPrivacy extends Component {
                 type="checkbox"
                 onClick={handleChange}
                 name="isCommunication"
-                checked={isCommunication}
+                defaultChecked={values.isCommunication}
               />
               <label>{label.communication}</label>
             </article>

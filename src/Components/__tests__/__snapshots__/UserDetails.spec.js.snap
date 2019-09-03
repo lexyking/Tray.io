@@ -1,0 +1,93 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`UserDetails component Render Correctly 1`] = `
+Array [
+  "",
+  <section
+    className="mainSection"
+  >
+    <section
+      className="formSection"
+    >
+      <h2>
+        Enter User Details
+      </h2>
+      <article
+        className="inputFields"
+      >
+        <label>
+          Name
+          <span
+            className="asterisk"
+          >
+            *
+          </span>
+        </label>
+        <input
+          name="name"
+          placeholder="Enter Your Name"
+          required={true}
+          type="text"
+        />
+      </article>
+      <article
+        className="inputFields"
+      >
+        <label>
+          Role
+          <span
+            className="asterisk"
+          >
+            *
+          </span>
+        </label>
+        <input
+          name="role"
+          placeholder="Enter Your Role"
+          type="text"
+        />
+      </article>
+      <article
+        className="inputFields"
+      >
+        <label>
+          Email
+          <span
+            className="asterisk"
+          >
+            *
+          </span>
+        </label>
+        <input
+          name="email"
+          placeholder="Enter Your Email"
+          type="text"
+        />
+      </article>
+      <article
+        className="inputFields"
+      >
+        <label>
+          Password
+          <span
+            className="asterisk"
+          >
+            *
+          </span>
+        </label>
+        <input
+          name="password"
+          placeholder="Enter Your Password"
+          type="password"
+        />
+      </article>
+      <button
+        className="btn"
+        onClick={[Function]}
+      >
+        Continue
+      </button>
+    </section>
+  </section>,
+]
+`;
