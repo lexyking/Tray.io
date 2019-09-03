@@ -64,9 +64,9 @@ export class UserForm extends Component {
   isValid = event => {
     const schema = Joi.object().keys({
       name: Joi.string().min(3).max(30).required(),
-      role: Joi.string().required(),
+      role: Joi.string().min(4).required(),
       email: Joi.string().email(),
-      password: Joi.string().regex(/^[a-zA-Z0-9]{3,30}$/)
+      password: Joi.string().regex(/^(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{9,}$/).required()
     })
 
     return Joi.validate(event, schema, (err, result) => {

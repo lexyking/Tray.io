@@ -12,6 +12,7 @@ This project is developed as part of the TRAY.io front-end job technical intervi
 
 - Create a responsive form
 - Validate the input (should not be empty)
+- User can not go to the next step if the input fields are empty
 - Multi steps form with a label to indicate which steps the user is at
 - The submit button is available at the end
 - A successful screen should appear to signify the form is valid and sent
