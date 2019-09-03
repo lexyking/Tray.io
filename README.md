@@ -14,21 +14,24 @@ This project is developed as part of the TRAY.io front-end job technical intervi
 - Validate the input (should not be empty)
 - Multi steps form with a label to indicate which steps the user is at
 - The submit button is available at the end
-- A successful screen shoul appear to signify the form is valid and sent
+- A successful screen should appear to signify the form is valid and sent
 
 ### Technologies
 
 The main technology used for this project will be reactJS. 
-Joi will be used for validation and material-ui will be implemented to handle the syling of the components.
-Jest is used for the testing
+Joi will be used for validation and the styling was managed by pure CSS.
+react-test-renderer is used for the testing of the upper level of components.
 
 ### Run the app
 
-After cloning the repo, use 
-```yarn install```
+After cloning the repo, use ```yarn install```
 
 then ```yarn start```
 
 in the terminal to run the application :rocket: 
+
+### Testing the application
+
+To test the application, run ```yarn test``` to check all the tests or ```yarn <nameOfTheFileToTest.spec.js>```
 
 
