@@ -81,8 +81,10 @@ input{
   position: absolute;
   width: 60%;
   height: 30%;
-  background: red;
+  /* border: 2px solid red; */
+  background: rgb(170, 174, 127);
   color: white;
+  font-size: 2rem;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -94,6 +96,16 @@ input{
 .btnClose{
   position: absolute;
   bottom: 5%;
+  background: rgba(255, 0, 0, 0.603);
+  border: none;
+  /* padding: 1rem; */
+  width: 4rem;
+  font-size: 2rem;
+  color: white;
+}
+
+.btnClose:hover{
+  background: red;
 }
 
 .errorBoxDisappear{
