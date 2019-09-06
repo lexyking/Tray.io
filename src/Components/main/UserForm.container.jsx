@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
-import UserDetails from './UserDetails';
-import UserPrivacy from './UserPrivacy'
+import UserDetails from './UserDetails.component';
+import UserPrivacy from './UserPrivacy.component'
 import UserConfirm from './UserConfirm';
-import UserDone from './UserDone';
+import UserDone from './UserDone.component';
 import Joi from 'joi';
 
 export class UserForm extends Component {
